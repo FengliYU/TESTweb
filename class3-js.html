@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="demo.js"></script>
+    <script>
+        console.log("hello world head");
+    </script>
+
+</head>
+
+    <h1>JavasScript知识</h1>
+
+    <h2>基本概念</h2>
+    <ol>
+        <li>JavaScript是一种轻量级 解释性 面向对象的脚本语言 用于网页上的动态效果 增强交互性</li>
+        <li>JavaScript是一种客户端脚本语言 可以直接嵌入HTML 并且在浏览器中执行</li>
+    </ol>
+    <ol>
+        <li>客户端脚本——在用户浏览器中执行</li>
+        <li>网页开发——与html与css协同工作 增强网页的交互性和动态性</li>
+        <li>后端开发——使用node.js JavaScript在服务端运行 实现服务端开发</li>
+    </ol>
+
+    <h2>JavaScript的导入方式</h2>
+    <ol>
+        <li>内部嵌入式——在html文件中使用script标签</li>
+        <li>外部导入式——在html文件中使用script src="demo.js"</script>导入外部js文件</li>
+    </ol>
+    <script>
+        console.log("hello world body");
+        // alert("body 弹窗");
+    </script>
+    
+    <h2>变量</h2>
+    <ol>
+        <li>var 声明变量 有函数作用域</li>
+        <li>let 给变量赋值 有块作用域</li>
+        <li>const 常量</li>
+    </ol>
+    <script>
+        var x=1;
+        let y=2;
+        const z=3;
+        console.log(x,y,z);
+    </script>
+
+    <h2>条件/循环语句</h2>
+    <ol>
+        <li>条件语句 if(){} else if(){} else{}</li>
+        <li>循环语句 for(初始化;条件;迭代器){}</li>
+        <li>循环语句 while(循环条件){}</li>
+        <li>循环语句 do{}while(循环条件)</li>
+        <li>break和continue——continue只跳过本次循环 break终止循环</li>
+    </ol>
+    <script>
+        let cnt=0;
+        do{
+            cnt++;
+            if(cnt==2){
+                continue;
+            }
+            console.log(cnt);
+            if(cnt==3){
+                break;
+            }
+        }
+        while(cnt<5)
+    </script>
+
+    <h2>函数</h2>
+    <ol>
+        <li>函数声明 function 函数名(参数){ return xxx }</li>
+        <li>在函数内的变量 无法在函数外进行使用</li>
+    </ol>
+
+    <h2>事件</h2>
+    <ol>
+        <li>HTML属性</li>
+        <li>DOM属性</li>
+        <li>addEventListener()f方法</li>
+    </ol>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>事件</th>
+                <th>描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>onClick</td>
+                <td>点击</td>
+            </tr>
+                <td>onMouseOver</td>
+                <td>鼠标移动</td>
+            </tr>
+            <tr>
+                <td>onMouseOut</td>
+                <td>鼠标移出</td>
+            </tr>
+            <tr>
+                <td>onChange</td>
+                <td>文本内容改变</td>
+            </tr>
+            <tr>
+                <td>onSelect</td>
+                <td>文本框选中</td>
+            </tr>
+            <tr>
+                <td>onFocus</td>
+                <td>光标聚集</td>
+            </tr>
+            <tr>
+                <td>onBlur</td>
+                <td>光标移开</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <button onClick="click1()">点击按钮运行函数</button>
+    <br>
+    <script>
+        function click1(){
+            alert("你成功点击了click1按钮");
+        }
+    </script>
+    <input type="text" onFocus="onfocus1()" onBlur="onBlur()">
+    <script>
+        function onfocus1(){
+            console.log("你成功聚焦了文本框");
+        }
+        function onBlur(){
+            console.log("你成功移开了文本框");
+        }
+    </script>
+
+    <h2>DOM</h2>
+    <p>在web开发中 DOM通常与JavaScript一起使用</p>
+    <ol>
+        <li>网页被加载时 浏览器会创建页面的文档对象 也就是DOM</li>
+        <li>每个HTML或XML文档可能会被视为一个文档树</li>
+        <li>DOM为文档提供了一个编程接口 开发者可以使用JavaScript来操作树状结构</li>
+    </ol>
+    <img src="tree.jpg" alt="tree" style="width:500px; height: 300px">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>方法</th>
+                <th>描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>appendChild</td>
+                <td>添加新子节点</td>
+            </tr>
+            <tr>
+                <td>removeChild</td>
+                <td>删除子节点</td>
+            </tr>
+            <tr>
+                <td>replaceChild</td>
+                <td>替换子节点</td>
+            </tr>
+            <tr>
+                <td>insertBefore</td>
+                <td>在指定子节点前插入新节点</td>
+            </tr>
+            <tr>
+                <td>createAttribute</td>
+                <td>创建属性节点</td>
+            </tr>
+            <tr>
+                <td>createElement</td>
+                <td>创建元素节点</td>
+            </tr>
+            <tr>
+                <td>createTextNode</td>
+                <td>创建文本节点</td>
+            </tr>
+            <tr>
+                <td>getAttribute</td>
+                <td>获取属性节点</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div id="id1">
+        这是一个DOM的id1格式展示
+    </div>
+    <div class="class1">
+        这是一个DOM的class格式展示
+    </div>
+    <div id="id2">
+        这是一个DOM的id2格式展示
+    </div>
+    <script>
+        // 1.读取
+        var id1 = document.getElementById("id1");
+        console.log(id1);
+        var class1=document.getElementsByClassName("class1");
+        console.log(class1);
+        console.log(class1[0]);
+        var div3=document.getElementsByTagName("div");
+        console.log(div3);
+        // 2.赋值
+            // innerHTML能够读取语义 解析html标签
+        id1.innerHTML="<a href='#'>这是一个修改后的id1</a>";
+            // innertext是纯文本 不会添加html渲染效果
+        class1[0].innerText="<a href='#'>这是一个修改后的class1</a>";
+        // 3.修改
+        class1[0].style.color="green";
+        // id2.onfocus=id2_onfocus(id2.style.color);
+        // id2_onfocus(color){
+        //     color="red";
+        // }
+        id2.onclick=function(){
+            alert("你成功点击了id2");
+        }
+        // addeventlistener方法
+        id2.addEventListener("mouseover",function(){
+            id2.style.color="red";
+        });
+        id2.addEventListener("mouseout",function(){
+            id2.style.color="black";
+        });
+    </script>
+
+</body>
+</html>

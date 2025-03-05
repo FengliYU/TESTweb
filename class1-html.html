@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 一级标题 -->
+    <h1>HTML知识</h1>
+
+    <!-- 二级标题 -->
+    <h2>超链接link——a herf=""</h2>
+    <!-- 超链接 -->
+    <p><a href="#part2">jump to part2</a></p>
+    <p><a href="#part3">jump to part3</a></p>
+    <p><a href="#part4">jump to part4</a></p>
+    <p><a href="#part5">jump to part5</a></p>
+    <p><a href="#part6">jump to part6</a></p>
+    <p><a href="#part7">jump to part7</a></p>
+    <p><a href="#part8">jump to part8</a></p>
+
+    <p><a href="https://www.bilibili.com/video/BV1BT4y1W7Aw/?spm_id_from=333.788.videopod.episodes&vd_source=0fd7886dd2a50417249d8c224da1b12d&p=4">bilibili课程链接</a></p>
+    <p><a href="https://www.bilibili.com/video/BV1BT4y1W7Aw/?spm_id_from=333.788.videopod.episodes&vd_source=0fd7886dd2a50417249d8c224da1b12d&p=4" target="_BLANK">bilibili跳转课程链接</a></p>
+    <p><a href="https://www.runoob.com/html/html-tutorial.html" target="_BLANK">HTML教程链接</a></p>
+    
+    <!-- 二级标题 -->
+    <h2 id="part2">列表list——ol-li</h2>
+    <p>name: yufengli  phone: 1234567890</p >
+    <!-- 有序列表 -->
+    <ol>
+        <li>div和span都是单独的块,方便对整个块的内容进行渲染,不具有实际的页面痕迹影响</li>
+        <li>大多数html都有的属性是id、class、style</li>
+        <li>常见的行内元素inline有span、a、strong、em、img、br、input</li>
+        <li>常见的块元素block有div、p、h1、ul、ol、li、table、form</li>
+    </ol>
+    <!-- 无序列表 -->
+    <ul>
+        <li>css的样式优先级: 内联样式 > 内部样式 > 外部样式 > 浏览器默认样式</li>
+        <li>选择器——类选择器 元素选择器 id选择器 子元素选择器 后代选择器 并集选择器 伪类选择器</li>
+    </ul>
+
+    <!-- 二级标题 -->
+    <h2 id="part3">数据表——table-thead/tbody-tr-th/td</h2>
+    <!-- 表格 -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>yufengli</td>
+                <td>1234567890</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 二级标题 -->
+    <h2 id="part4">分级标题 h3 h4</h2>
+    <!-- 段落 -->
+    <article>
+        <h3>h3</h3>
+            <h4>h4</h4>
+                <p>this is article context</p >
+    </article>
+
+    <!-- 二级标题 -->
+    <h2 id="part5">表单form</h2>
+    <form>
+        <label for="name">name*:</label>
+        <input type="text" placeholder="name" required><br>
+        <label for="password">password:</label>
+        <input type="password" placeholder="password"><br>
+        <label for="">gender<label>
+            <input type="radio" name="gender">man
+            <input type="radio" name="gender">female
+            <input type="radio" name="gender">others
+        <br>
+        <button type="submit">submit</button>
+    </form>
+
+
+    <!-- 二级标题 -->
+    <h2 id="part6">侧边栏aside</h2>
+    <!-- 侧边栏 -->
+    <aside>
+        <p>this is a app</p >
+        <p>this ia an article</p >
+    </aside>
+
+    <!-- 二级标题 -->
+    <h2 id="part7">多媒体img-audio-video</h2>
+    <!-- 图片 -->
+    <img src="test.jpg" alt="图片无法显示">
+    <br>
+    <!-- 音频 -->
+    <audio contorls> 
+        <source src="test.mp3" alt="音频无法播放">
+    </audio>
+    <br>
+    <!-- 视频 -->
+    <video controls>
+        <source src="test.mp4" alt="视频无法播放">
+    </video>
+
+    <!-- 二级标题 -->
+    <h2 id="part8">字体格式font</h2>
+        <p><b>加粗b</b></p>
+        <P><u>下划线u</u></P>
+        <p><i>斜体i</i></p>
+        <p><s>删除s</s></p>
+        <br>
+        <p>上面写了br代表换行 下面写了hr代表分割线</p>
+        <hr>
+        <!-- hr和br都是单标签,独立存在,不是对其他内容的渲染 -->    
+
+    <!-- 页脚 -->
+    <footer>
+        <p>Copyright © 2025 yufengli. All rights reserved.</p >
+    </footer>
+    <script srs"script.js"></script>
+
+</body>
+</html>
