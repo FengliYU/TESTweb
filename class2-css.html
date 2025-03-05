@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 内部样式设置 -->
+    <link rel="stylesheet" href="demo.css">
+    <style>
+        /* 元素选择器 */
+        p{
+            color: blueviolet;
+            font-size: x-small;
+        }
+        /* 类选择器 */
+        .p2{
+            color:red;
+        }
+        /* id选择器 */
+        #p1{
+            color: green;
+        }
+        /* 通用选择器 */
+        *{
+            background-color: aqua;
+        }
+        /* 子元素选择器 */
+        .father > .son{
+            color: blue;
+        }
+        /* 后代选择器 */
+        .father p{
+            font-size: large;
+        }
+        /* 相邻元素选择器,只选择后面的元素添加特征 */
+        h3 + p{
+            color: white;
+        }
+        /* 伪类选择器_鼠标悬停*/
+        #element1:hover{
+            font-size: larger;
+        }
+        #element1::before{
+            content: "鼠标悬停效果";
+            color: red;
+        }
+        h2:after{
+            content: " 这是二级标题";
+            color: green;
+            font-size: x-small;
+        }
+        .demo{
+            border-style: solid;
+            border-width: 5px 10px;
+            border-color: red blue;
+            border-radius: 10px;
+        }
+        /* 设置floatdemo的格式 */
+        .floatdemo{
+            border: 1px solid black;
+            width: 100%;
+            /* 清除浮动方式1 */
+            overflow:hidden;
+        }
+        /* 清除浮动方式2 */
+        /* .floatdemo::after{
+            content: "";
+            display:table;
+            clear:both;
+        } */
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color:white;
+        } 
+        .box11{
+            width: 30px;
+            height: 30px;
+            background-color: red;
+        }
+        .box12{
+            width: 30px;
+            height: 30px;
+            background-color:blue;
+            position: relative;
+            left: 10px;
+            top: 10px;
+        }
+        .box13{
+            width: 30px;
+            height: 30px;
+            background-color:purple;
+            position: absolute;
+            left: 10px;
+            top: 2100px;
+        }
+        .box14{
+            width: 30px;
+            height: 30px;
+            background-color:purple;
+            position: fixed;
+            right: 100px;
+            bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--一级标题 -->
+    <h1 style="color:red">CSS课程学习</h1> 
+
+    <h2>CSS内部选择器渲染</h2>
+    <p><a href="https://www.runoob.com/cssref/css-reference.html"  target="_blank">css教程链接</a></p>
+    <p>这是一个元素选择器的渲染样式</p>
+    <p class="p2">这是一个class选择器的样例</p>
+    <p id="p1">这是一个id选择器的样例</p>
+    <div class="father">
+        <p class="son">这是一个子元素选择器的样例</p>
+        <div class="son">
+            <p class="grandson">这是一个下一级子元素选择器的样例</p>
+        </div>
+    </div>
+    <P>这是一个兄弟选择器的样例</P>
+    <h3>这是一个兄弟选择器的样例</h3>
+    <p>这是一个兄弟选择器的样例</p>
+    <p id="element1">这是一个伪元素选择器的样例——鼠标悬停效果</p>
+
+
+    <h2>CSS属性讲解</h2>
+    <p>color: 颜色</p>
+    <p>line-height行高</p>
+    <p>background-color: 背景颜色</p>
+    <p>font-weight: 字体粗细</p>
+    <p>font-famliy: 字体</p>
+    <p>font-size: 字体大小</p>
+    <p>font组合属性,可以写成font:15px "kaiTi"</p>
+    <ol>
+        <li>块元素block——从新一行开始;占整行空间;可以包含其他块 行内元素</li>
+        <ol>
+            <li>例:div</li>
+        </ol>
+        <li>行内块元素inline-block——水平排列,不单独占一行;可以包含块 行内元素</li>
+        <ol>
+            <li>例:div</li>
+        </ol> 
+        <li>行内元素inline——不独占一行,无法添加高度和宽度;可以包含其他行内元素</li>
+        <ol>
+            <li>例:span</li>
+        </ol>
+    </ol>
+    <p>转换块元素 行内元素 行内块元素display</p>
+    <div style="display:inline-block; background-color:red; width: 500px;">这是一个行内块元素</div>
+    
+    
+    <h2>CSS盒模型</h2>
+    <div style="width: 200px; height: 200px; background-color: blue; padding: 20px; margin: 20px; border: 20px solid red;">
+        <img src="box.jpg" alt="盒模型" style="width: 30%; height: 30%;">
+        <img src="box.jpg" alt="盒模型" style="width: 50%; height: 50%;">
+    </div>
+    <div class="demo">这是一个border基础属性的说明</div>
+    <ol>
+        <li>border-style: 实线、虚线、点线、双线</li>
+        <li>border-width: 边框宽度</li>
+        <li>border-color: 边框颜色</li>
+        <li>border-radius: 边框圆角</li>
+    </ol>
+
+    <h2>CSS浮动</h2>
+    <p>常见的网页布局方式</p>
+    <ol>
+        <li>标准流——普通文档书写方式</li>
+        <li>浮动float</li>
+        <li>定位position</li>
+        <li>自适应布局——flexbox和grid布局</li>
+    </ol>
+    <ol>
+        <li>felx浮动元素和行内块的区别是 浮动元素是贴在一起的 不会有缝隙</li>
+        <li>float属性有三个值 左浮 右浮 不浮动</li>
+        <li>浮动有三个特性 脱离标准流 一行显示 顶部对齐 具备行内块元素特性</li>
+    </ol>
+    <div class="floatdemo">
+        <div style="float:left">左浮动</div>
+        <div style="float:right">右浮动</div>
+        <div style="float:none">  "右浮动后面的内容"</div>
+    </div>
+    <!-- 清除了floatdemo的浮动,然后再做展示 -->
+    <div style="float:both">不浮动</div>
+
+
+    <h2>CSS定位</h2>
+    <ol>
+        <li>相对定位——在文档流中的顺序位置</li>
+        <li>绝对定位——相对于某元素的位置</li>
+        <li>固定定位——相对于浏览器窗口的位置</li>
+    </ol>
+    <p>相对位置——定位在大模块的相对位置</p>
+    <div class="box1">
+        <div class="box11"></div>
+        <div class="box12"></div>
+        <div class="box11"></div>
+    </div>
+    <p>绝对位置——定位在整个网页的位置</p>
+    <div class="box1">
+        <div class="box11"></div>
+        <div class="box13"></div>
+        <div class="box11"></div>
+    </div>
+    <p>固定位置——相对于浏览器敞口定位</p>
+    <div class="box1">
+        <div class="box11"></div>
+        <div class="box14"></div>
+        <div class="box11"></div>
+    </div>
+
+</body>
+</html>
